@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>       
+		<h5>PAGE DE LISTE D'UN maison</h5>
+
+  <table >
+  	<tr>
+  		<td>Id : </td>
+  		<td>Code : </td>
+  		<td>nom : </td>
+  	</tr>
+  {% for maison in maisons %}
+  
+     <tr>
+     <td>
+     <a href="/maison/{{maison.id}}">
+     	{{maison.id}}
+    </a>
+     </td>
+		<td>{{maison.code}}</td>
+    	<td>{{maison.libelle}}</td>
+    </tr>
+	{% endfor %}
+ </table>
+	
+	 
+    </body>
+</html>

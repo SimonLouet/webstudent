@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>       
+		<h5>PAGE DE LISTE D'UN ETUDIANT</h5>
+ <p>
+  <table >
+  	<tr>
+  		<td>Id : </td>
+  		<td>Nom : </td>
+  		<td>Prénom : </td>
+  	</tr>
+  {% for etudiant in etudiants %}
+  
+     <tr>
+     <td>
+     <a href="/etudiant/{{etudiant.id}}">
+     	{{etudiant.id}}
+    </a>
+     </td>
+		<td>{{etudiant.nom}}</td>
+    	<td>{{etudiant.prenom}}</td>
+    </tr>
+	{% endfor %}
+ </table>
+	
+	 
+    </body>
+</html>

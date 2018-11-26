@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>       
+		<h5>PAGE DE LISTE D'UN competence</h5>
+ <p>
+  <table >
+  	<tr>
+  		<td>Id : </td>
+  		<td>Code : </td>
+  		<td>Libellé : </td>
+  		<td>Nombre étudiants max : </td>
+  	</tr>
+  {% for competence in competences %}
+  
+     <tr>
+		 <td>
+		 <a href="/competence/{{competence.id}}">
+		 	{{competence.id}}
+		</a>
+		 </td>
+		<td>{{competence.code}}</td>
+		<td>{{competence.libelle}}</td>
+		<td>{{competence.nbEtudiantMax}}</td>
+	</tr>
+	{% endfor %}
+ </table>
+	
+	 
+    </body>
+</html>
